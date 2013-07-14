@@ -13,20 +13,22 @@ Example
 var b = BibleRefParser("Gen 1:2-12,14; 2; Lev 3:3ff");
 console.log(b.references)
 /*
-   [ { bookId: 1, chapter: 1, startVerse: 2, endVerse: 12 },
-     { bookId: 1, chapter: 1, startVerse: 14, endVerse: 14 },
-     { bookId: 1, chapter: 2, startVerse: 1, endVerse: 24 },
-     { bookId: 3, chapter: 3, startVerse: 3, endVerse: 35 }
+   [ { bookId: 1, chapter: 1, startVerse: 2, endVerse: 12, bookOsis: "Gen" },
+     { bookId: 1, chapter: 1, startVerse: 14, endVerse: 14, bookOsis: "Gen" },
+     { bookId: 1, chapter: 2, startVerse: 1, endVerse: 24, bookOsis: "Gen" },
+     { bookId: 3, chapter: 3, startVerse: 3, endVerse: 35, bookOsis: "Lev" }
    ],
 */
 
 var iter = b.iterator;
 
-var v = it.next(); /* { bookId: 1, chapter: 1, verse: 2 } */
-v = it.next(); /* { bookId: 1, chapter: 1, verse: 3 } */
+var v = it.next(); /* { bookId: 1, chapter: 1, verse: 2, bookOsis: "Gen" } */
+v = it.next(); /* { bookId: 1, chapter: 1, verse: 3, bookOsis: "Gen" } */
 /* ... */
 
 ```
+
+`bookOsis` refers to OSIS/SBL normative abbreviations for Bible book names. Generating an `osisRef` ID from a reference entry should be a simple matter of programming.
 
 Tests
 -----
