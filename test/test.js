@@ -125,3 +125,12 @@ test("Iterator", function(){
   v = it.next();
   assert.deepEqual(v, undefined);
 });
+
+test('Gen 2', function(){
+  var b = BibleRefParser("Gen 2");
+  assert.deepEqual(b.references,
+    [ 
+      { bookId: 1, chapter: 2, startVerse: 1, endVerse: 24, bookOsis: "Gen" },
+   ]
+  );
+});
