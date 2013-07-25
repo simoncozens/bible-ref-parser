@@ -42,7 +42,7 @@ test('Bad language', function(){
 test('Gen 1:1-2:4', function(){
   var b = BibleRefParser("Gen 1:1-2:4");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 31 },
       { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 4 } ]
   );
 });
@@ -50,7 +50,7 @@ test('Gen 1:1-2:4', function(){
 test('Gen 1:1-2:4; 3:1-3:11', function(){
   var b = BibleRefParser("Gen 1:1-2:4; 3:1-3:11");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 31 },
       { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 4 },
       { bookId: "Gen", chapter: 3, startVerse: 1, endVerse: 11 },
    ]
@@ -60,7 +60,7 @@ test('Gen 1:1-2:4; 3:1-3:11', function(){
 test('Gen 1:1-2:4; Lev 3:1-3:11', function(){
   var b = BibleRefParser("Gen 1:1-2:4; Lev 3:1-3:11");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 31 },
       { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 4 },
       { bookId: "Lev", chapter: 3, startVerse: 1, endVerse: 11 },
    ]
@@ -70,7 +70,7 @@ test('Gen 1:1-2:4; Lev 3:1-3:11', function(){
 test('Gen 1:1-2:4, 2:14-16; Lev 3:1-3:11; 3:13-16', function(){
   var b = BibleRefParser("Gen 1:1-2:4, 2:14-16; Lev 3:1-3:11; 3:13-16");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 1, endVerse: 31 },
       { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 4 },
       { bookId: "Gen", chapter: 2, startVerse: 14, endVerse: 16 },
       { bookId: "Lev", chapter: 3, startVerse: 1, endVerse: 11 },
@@ -82,7 +82,7 @@ test('Gen 1:1-2:4, 2:14-16; Lev 3:1-3:11; 3:13-16', function(){
 test('Gen 1:4-,2:3', function(){
   var b = BibleRefParser("Gen 1:4-,2:3");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 31 },
       { bookId: "Gen", chapter: 2, startVerse: 3, endVerse: 3 },
    ]
   );
@@ -91,8 +91,8 @@ test('Gen 1:4-,2:3', function(){
 test('Gen 1:4-; 2 ; 3:3', function(){
   var b = BibleRefParser("Gen 1:4-; 2 ; 3:3");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 25 },
-      { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 24 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 31 },
+      { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 25 },
       { bookId: "Gen", chapter: 3, startVerse: 3, endVerse: 3 },
 
    ]
@@ -103,7 +103,7 @@ test('Gen 1:4-; 2 ; 3:3', function(){
 test('Gen 1:4-, 2 ; 3:3', function(){
   var b = BibleRefParser("Gen 1:4-, 2 ; 3:3");
   assert.deepEqual(b.references,
-    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 25 },
+    [ { bookId: "Gen", chapter: 1, startVerse: 4, endVerse: 31 },
       { bookId: "Gen", chapter: 1, startVerse: 2, endVerse: 2 },
       { bookId: "Gen", chapter: 3, startVerse: 3, endVerse: 3 },
 
@@ -130,7 +130,7 @@ test('Gen 2', function(){
   var b = BibleRefParser("Gen 2");
   assert.deepEqual(b.references,
     [ 
-      { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 24 },
+      { bookId: "Gen", chapter: 2, startVerse: 1, endVerse: 25 },
    ]
   );
 });
