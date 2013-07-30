@@ -24,6 +24,7 @@ var v = it.next(); /* { bookId: "Gen", chapter: 1, verse: 2 } */
 v = it.next(); /* { bookId: "Gen", chapter: 1, verse: 3 } */
 /* ... */
 
+b.toString(); // Canonical representation: "Gen 1:2-12,14; 2; Lev 3:3-"
 ```
 
 The book IDs are taken from OSIS/SBL normative abbreviations for Bible book names. Generating an `osisRef` ID from a reference entry should be a simple matter of programming.

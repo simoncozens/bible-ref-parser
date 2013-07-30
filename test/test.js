@@ -134,3 +134,22 @@ test('Gen 2', function(){
    ]
   );
 });
+test('Basic stringification: Gen 1:4-10', function(){
+  var b = BibleRefParser("Gen 1:4-10");
+  assert.equal(b.toString(), "Gen 1:4-10");
+});
+
+test('Stringification: Gen 1:4-, 2 ; 3:3', function(){
+  var b = BibleRefParser("Gen 1:4-, 2 ; 3:3");
+  assert.equal(b.toString(), "Gen 1:4-,2; 3:3");
+});
+
+test('Stringification: Gen 1:2,4,6,8', function(){
+  var b = BibleRefParser("Gen 1:2,4,6,8");
+  assert.equal(b.toString(), "Gen 1:2,4,6,8");
+});
+
+test('Gen 1:1-2:4, 2:14-16; Lev 3:1-3:11; 3:13-16', function(){
+  var b = BibleRefParser("Gen 1:1-2:4, 2:14-16; Lev 3:1-3:11; 3:13-16");
+  assert.equal(b.toString(),"Gen 1; 2:1-4,14-16; Lev 3:1-11,13-16");
+});
