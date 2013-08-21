@@ -1,3 +1,12 @@
+HEY, DON'T USE THIS
+===================
+
+<a
+href="https://github.com/openbibleinfo/Bible-Passage-Reference-Parser">This</a>
+looks way better instead; use that. This repository should be considered
+unmaintained. Sorry; I should have done better research.
+
+ 
 bible-ref-parser
 ================
 
